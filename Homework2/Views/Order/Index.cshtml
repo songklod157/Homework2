@@ -1,0 +1,21 @@
+﻿<form method="post" asp-controller="Order" asp-action="Index">
+    <select id="ddlFruits" name="FruitId" asp-items="Model">
+        <option value="0">Please select</option>
+    </select>
+    <input type="hidden" name="FruitName" />
+    <input type="submit" value="Submit" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+            $("body").on("change", "#ddlFruits", function () {
+                $("input[name=FruitName]").val($(this).find("option:selected").text());
+            });
+    </script>
+    @if (ViewBag.Message != null)
+    {
+        <script type="text/javascript">
+            $(function () {
+                alert("@ViewBag.Message");
+            });
+        </script>
+    }
+</form>
