@@ -1,21 +1,35 @@
-﻿<form method="post" asp-controller="Order" asp-action="Index">
-    <select id="ddlFruits" name="FruitId" asp-items="Model">
-        <option value="0">Please select</option>
-    </select>
-    <input type="hidden" name="FruitName" />
-    <input type="submit" value="Submit" />
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript">
-            $("body").on("change", "#ddlFruits", function () {
-                $("input[name=FruitName]").val($(this).find("option:selected").text());
-            });
-    </script>
-    @if (ViewBag.Message != null)
-    {
-        <script type="text/javascript">
-            $(function () {
-                alert("@ViewBag.Message");
-            });
-        </script>
-    }
-</form>
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div method="post" asp-controller="Order" asp-action="Index">
+    <h1>Welcome:@ViewBag.name</h1>
+</div>
+<div>
+
+</div>
+<div>
+    <div>
+        <h1>Order</h1>
+        <form asp-controller="Order" asp-action="Buy" method="post">
+            <span>Enter Name of Game : </span><input id="Text1" name="game" type="text" value="" />
+            <span>Enter Quality : </span><input id="Text2" name="qty" type="text" value="" />
+            <span>Enter Price : </span><input id="Text2" name="pri" type="text" value="" />
+            <input id"submit1" type="submit" value="Buy" />
+        </form>
+    </div>
+    <div>
+
+        <h1>Myorder</h1>
+        <div asp-controller="Order" asp-action="Buy" method="post">
+            <p>Game : @ViewBag.namegame</p>
+            <p>Quality : @ViewBag.qty </p>
+            <p>Price : @ViewBag.pri Bath</p>
+            <p>Total : @ViewBag.total Bath</p>
+            <input asp-route="Order" id"submit1" type="submit" value="Buy Continue" />
+            <input asp-route="Login" id"submit1" type="submit" value="Exit" />
+        </div>
+    </div>
+</div>
