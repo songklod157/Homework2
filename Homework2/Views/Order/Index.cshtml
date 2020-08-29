@@ -33,19 +33,49 @@
             <span>Enter Name of Game : </span><input id="Text1" name="game" type="text" value="" />
             <span>Enter Quality : </span><input id="Text2" name="qty" type="text" value="" />
             <span>Enter Price : </span><input id="Text2" name="pri" type="text" value="" />
-            <input id"submit1" type="submit" value="Buy" />
+            <input type="submit" value="Buy" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" />
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Myorder</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div asp-controller="Order" asp-action="Buy" method="post">
+                                <p>Game : @ViewBag.namegame</p>
+                                <p>Quality : @ViewBag.qty </p>
+                                <p>Price : @ViewBag.pri Bath</p>
+                                <p>Total : @ViewBag.total Bath</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </form>
     </div>
     <div>
-
-        <h1>Myorder</h1>
-        <div asp-controller="Order" asp-action="Buy" method="post">
-            <p>Game : @ViewBag.namegame</p>
-            <p>Quality : @ViewBag.qty </p>
-            <p>Price : @ViewBag.pri Bath</p>
-            <p>Total : @ViewBag.total Bath</p>
-            <input asp-route="Order" id"submit1" type="submit" value="Buy Continue" />
-            <input asp-route="Login" id"submit1" type="submit" value="Exit" />
+        @section Scripts
+{
+            <script type="text/javascript">
+                $('#exampleModal').modal('toggle')
+            </script>
+        }
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Myorder</h4>
+            <div asp-controller="Order" asp-action="Buy" method="post">
+                <p>Game : @ViewBag.namegame</p>
+                <p>Quality : @ViewBag.qty </p>
+                <p>Price : @ViewBag.pri Bath</p>
+                <p>Total : @ViewBag.total Bath</p>
+                <input asp-route="Order" id="submit1" type="submit" value="Buy Continue" />
+                <input asp-route="Login" id="submit1" type="submit" value="Exit" />
+            </div>
         </div>
     </div>
-</div>
