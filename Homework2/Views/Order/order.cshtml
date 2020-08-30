@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div>
+    <div>
+        <h1>Order</h1>
+        <form asp-controller="Order" asp-action="Buy" method="post">
+            <span>Enter Name of Game : </span><input id="Text1" name="game" type="text" value="" />
+            <span>Enter Quality : </span><input id="Text2" name="qty" type="text" value="" />
+            <span>Enter Price : </span><input id="Text2" name="pri" type="text" value="" />
+            <input type="submit" value="Buy" />
+
+            @section Scripts
+{
+                <script type="text/javascript">
+
+                </script>
+            }
+            <div>
+                <div class="alert alert-success" role="alert" id="myForm">
+                    <h4 class="alert-heading">Myorder</h4>
+                    <div>
+                        <p>Game : @ViewBag.namegame</p>
+                        <p>Quality : @ViewBag.qty </p>
+                        <p>Price : @ViewBag.pri Bath</p>
+                        <p>Total : @ViewBag.total Bath</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+  
+</div>
