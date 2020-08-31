@@ -9,8 +9,8 @@
         <h1 class="display-2 mb-4 p-3 mb-2 bg-warning text-white">Order</h1>
         <form asp-controller="Order" asp-action="Buy" method="post" class=" pt-4 pb-5 pl-2 pr-2 shadow p-3 mb-5 bg-white rounded">
             <span class="display-5">Enter Name of Game : </span><input style="background-color:antiquewhite;" class="form-control form-control-lg mt-2 text-center" id="Text1" name="game" type="text" value="" />
-            <span class="display-5">Enter Quality : </span><input class="form-control form-control-lg mt-2 text-center" id="Text2" name="qty" type="text" value="" />
-            <span class="display-5">Enter Price : </span><input class="form-control form-control-lg mt-2 text-center" id="Text2" name="pri" type="text" value="" />
+            <span class="display-5">Enter Quality : </span><input style="background-color:antiquewhite;"class="form-control form-control-lg mt-2 text-center" id="Text2" name="qty" type="text" value="" />
+            <span class="display-5">Enter Price : </span><input style="background-color:antiquewhite;"class="form-control form-control-lg mt-2 text-center" id="Text2" name="pri" type="text" value="" />
             <input class=" mt-5 btn-warning p-3" type="submit" value="Buy" />
 
             @section Scripts
@@ -21,12 +21,12 @@
             }
             <div class="mt-5 alert-warning mt-5 p-5">
                 <div class="" role="alert" id="myForm">
-                    <h4 class="alert-heading">Myorder</h4>
+                    <h4 class="alert-heading display-4">My order</h4>
                     <div>
-                        <p>Game : @ViewBag.namegame</p>
-                        <p>Quality : @ViewBag.qty </p>
-                        <p>Price : @ViewBag.pri Bath</p>
-                        <p>Total : @ViewBag.total Bath</p>
+                        <p class="display-5">Game : @ViewBag.namegame</p>
+                        <p class="display-5">Quality : @ViewBag.qty </p>
+                        <p class="display-5">Price : @ViewBag.pri Bath</p>
+                        <p class="display-5">Total : @ViewBag.total Bath</p>
                     </div>
                 </div>
             </div>

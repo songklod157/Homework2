@@ -17,7 +17,7 @@ namespace Homework2.Controllers
 
             var listgame = new List<ListData>();
             listgame.Add(new ListData { game = "Far Cry 5", price = 620 });
-            listgame.Add(new ListData { game="Gta 5",price= 550});
+            listgame.Add(new ListData { game="Gta V",price= 550});
             listgame.Add(new ListData { game="Dota 2",price= 360});
             listgame.Add(new ListData { game="Valorant",price= 130});
             listgame.Add(new ListData { game="Monter Hunter World",price= 480});
