@@ -5,24 +5,26 @@
 }
 @model IEnumerable<Homework2.Models.ListData>
 <div method="post" asp-controller="Order" asp-action="Index">
-    <h1>Welcome:@ViewBag.name</h1>
-    <div>
-        @if (Model != null)
-        {
-            <table cellspacing="5" border="1" width="10%" style="border-collapse:collapse;">
-                <tr>
-                    <td>Game</td>
-                    <td>Price</td>
-                </tr>
-
-                @foreach (var item in Model)
-                {
+    <div class="text-center">
+        <h1 class="display-2 mb-4 p-3 mb-2 bg-info text-white">Welcome:@ViewBag.name</h1>
+        <div>
+            @if (Model != null)
+            {
+                <table cellspacing="5" border="1" width="10%" style="border-collapse:collapse;">
                     <tr>
-                        <td>@item.game</td>
-                        <td>@item.price</td>
+                        <td>Game</td>
+                        <td>Price</td>
                     </tr>
-                }
-            </table>
-        }
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.game</td>
+                            <td>@item.price</td>
+                        </tr>
+                    }
+                </table>
+            }
+        </div>
+        </div>
     </div>
-</div>

@@ -5,13 +5,13 @@
 }
 
 <div>
-    <div>
-        <h1>Order</h1>
-        <form asp-controller="Order" asp-action="Buy" method="post">
-            <span>Enter Name of Game : </span><input id="Text1" name="game" type="text" value="" />
-            <span>Enter Quality : </span><input id="Text2" name="qty" type="text" value="" />
-            <span>Enter Price : </span><input id="Text2" name="pri" type="text" value="" />
-            <input type="submit" value="Buy" />
+    <div class="text-center">
+        <h1 class="display-2 mb-4 p-3 mb-2 bg-warning text-white">Order</h1>
+        <form asp-controller="Order" asp-action="Buy" method="post" class=" pt-4 pb-5 pl-2 pr-2 shadow p-3 mb-5 bg-white rounded">
+            <span class="display-5">Enter Name of Game : </span><input style="background-color:antiquewhite;" class="form-control form-control-lg mt-2 text-center" id="Text1" name="game" type="text" value="" />
+            <span class="display-5">Enter Quality : </span><input class="form-control form-control-lg mt-2 text-center" id="Text2" name="qty" type="text" value="" />
+            <span class="display-5">Enter Price : </span><input class="form-control form-control-lg mt-2 text-center" id="Text2" name="pri" type="text" value="" />
+            <input class=" mt-5 btn-warning p-3" type="submit" value="Buy" />
 
             @section Scripts
 {
@@ -19,8 +19,8 @@
 
                 </script>
             }
-            <div>
-                <div class="alert alert-success" role="alert" id="myForm">
+            <div class="mt-5 alert-warning mt-5 p-5">
+                <div class="" role="alert" id="myForm">
                     <h4 class="alert-heading">Myorder</h4>
                     <div>
                         <p>Game : @ViewBag.namegame</p>

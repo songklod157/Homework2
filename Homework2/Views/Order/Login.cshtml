@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <div>
-    <h1>Login</h1>
-    <form asp-controller="Order" asp-action="Getname" method="post">
-        <span>Enter your name: </span><input id="Text1" name="name" type="text" value="" />
-        <input asp-route="Order" id="submit" type="submit" value="show" />
+    <div class="text-center">
+    <h1 class="display-2 mb-4 p-3 mb-2 bg-success text-white">Login</h1>
+    <form asp-controller="Order" asp-action="Getname" method="post" class=" pt-4 pb-5 pl-2 pr-2 shadow p-3 mb-5 bg-white rounded" >
+        <span class="display-4 mb-4">Enter your name: </span><input class="form-control form-control-lg mt-5 text-center" id="Text1" name="name" type="text" value="" />
+        <input class="btn btn-outline-secondary mt-5 p-3 display-4" asp-route="Order" id="submit" type="submit" value="SHOW" />
     </form>
+</div>
 </div>
